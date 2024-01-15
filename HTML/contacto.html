@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <img class="logo-header" src="../imagenes/logo.jpg" alt="logo_diagnostico">
+                   <!--Iniciá sesión, ¿cómo lo pongo?-->
+                    <a href="../index.html">Volver al inicio</a>
+                    <a href="../HTML/productos.html">Productos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <form class="formulario" action="form.php" method="post">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+        <input type="mail" name="mail" id="mail" placeholder="ejemplo@mail.com">
+        <input type="text" name="celular" id="celular" placeholder="Celular de contacto">
+        <p>Escriba aquí su consulta</p>
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+    <footer>
+        <img class="logo" src="../imagenes/logo.jpg" alt="Logo diagnóstico">
+    </footer>
+</body>
+</html>
