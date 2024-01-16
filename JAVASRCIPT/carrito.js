@@ -142,7 +142,7 @@ const pintarCarrito = () => {
     const headerCheckOut = document.createElement("div");
     headerCheckOut.className = "header-checkout";
     headerCheckOut.innerHTML =`
-    <h2 class="checkout-header-titulo">Checkout</h1>
+    <h2 class="checkout-header-titulo">Checkout</h2>
     `;
 
 // Lo agrego
@@ -183,7 +183,8 @@ guardarStorage();
    contenidoCarrito.appendChild(eliminar)
 
 // Funcionalidad al botón eliminar 
-eliminar.addEventListener("click", eliminarProducto);
+
+eliminar.addEventListener("click", () => eliminarProducto(el.id));
 guardarStorage();
 });
 
@@ -195,7 +196,7 @@ guardarStorage();
 // Mostrar total de la compra    
     const totalDeLaCompra = document.createElement("div");
     totalDeLaCompra.className = "total-compra";
-    totalDeLaCompra.innerHTML =`Total a pagar: $ ${total}`
+    totalDeLaCompra.innerHTML =`Total a pagar: $ ${total}`;
 
 //Lo agrego
     headerCheckOut.appendChild(totalDeLaCompra)
@@ -205,7 +206,7 @@ guardarStorage();
 
 verCarrito.addEventListener("click", pintarCarrito);
 
-const eliminarProducto =() =>{
+const eliminarProducto =(id) =>{
     const foundIndex = carrito.findIndex((el) => el.id === id);
     //console.log(foundIndex)
    if (foundIndex !== -1) {
