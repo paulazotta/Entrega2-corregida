@@ -21,9 +21,10 @@
 h3{
     color: white;
     background-color: orange;
-    border-radius: 7px;
+    border-radius: 6px;
     padding: 6px;
     font-family: sans-serif;
+    text-align: center;
 }
 h5{
     color: black;
@@ -31,16 +32,8 @@ h5{
     font-family: sans-serif;
 }
 /*--------------------VER CARRITO--------------------------*/
-.texto-carrito{
-    color:white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 17px;
-    background-color:black;
-    margin: 3px;
-    width: 10%;
-    align-items: center;
-    padding: 5px;
-    border-radius: 3px;
+.eliminar-producto{
+    background-color: none;
 }
 .contenedor-checkout {
     display: flex;
@@ -107,6 +100,17 @@ h5{
     justify-content: center;
 }
 
+/*Cantidad carrito*/
+.cantidadCarrito{
+    background-color: orangered;
+    color: white;
+    border-radius: 30%;
+    font-size: 15px;
+    padding: 4px;
+    position: absolute;
+    display: none;
+}
+
 /*--------------------HEADER--------------------------*/
 header{
     background-color: black;
@@ -138,7 +142,17 @@ header nav ul li a{
     background-color: orange;
     color: white;
     border-radius: 5px;
+    font-family: sans-serif;
     
+}
+header nav ul li div p{
+    text-decoration: none;
+    align-self: center;
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+    font-family: sans-serif;
 }
 .button{
     text-decoration: none;

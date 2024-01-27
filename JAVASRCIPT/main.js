@@ -1,4 +1,4 @@
-
+let dolar = 1000;
 // HEADER 
 let header = document.getElementById ("header");
 header.innerHTML = `
@@ -7,7 +7,9 @@ header.innerHTML = `
             <li>
                 <img class="logo-header" src="imagenes/logo.jpg" alt="logo_diagnostico">
                 <a href="HTML/contacto.html">Contacto</a>
-                
+                <div id="verCarrito">
+                    <p class="texto-carrito">Ver carrito🛒 <span id="cantidadCarrito" class="cantidadCarrito"></span></p>
+                </div> 
             </li>
             
         </ul>
@@ -166,11 +168,11 @@ class EquiposLineaAutoLink {
         alert ("El producto " + this.nombre + " es de la marca Autel y tiene cobertura " + this.cobertura + ". Incluye los siguientes accesorios: " + this.accesorios + ". El precio es $" + this.precio);
     }
 }
-const al319 = new EquiposLineaAutoLink ("AL319", "Multimarca", "No incluye", 30*valorDelDolar);
-const al419 = new EquiposLineaAutoLink ("AL419", "Multimarca", "Cable OBD II", 40*valorDelDolar);
-const al529 = new EquiposLineaAutoLink ("AL529", "Multimarca", "Cable OBD II", 50*valorDelDolar);
-const al529HD = new EquiposLineaAutoLink ("AL529 HD", "Multimarca", "Cable OBD II y adaptador X pines", 80*valorDelDolar);
-const al629 = new EquiposLineaAutoLink ("AL629", "Multimarca", "Cable OBD II", 70*valorDelDolar);
+const al319 = new EquiposLineaAutoLink ("AL319", "Multimarca", "No incluye", 30*dolar);
+const al419 = new EquiposLineaAutoLink ("AL419", "Multimarca", "Cable OBD II", 40*dolar);
+const al529 = new EquiposLineaAutoLink ("AL529", "Multimarca", "Cable OBD II", 50*dolar);
+const al529HD = new EquiposLineaAutoLink ("AL529 HD", "Multimarca", "Cable OBD II y adaptador X pines", 80*dolar);
+const al629 = new EquiposLineaAutoLink ("AL629", "Multimarca", "Cable OBD II", 70*dolar);
 
 console.log(al629)
 
@@ -225,9 +227,9 @@ nuevoArray.forEach ((el, idx) => console.log((idx +1) + " El equipo recomendado 
 
 // FIND --> Busca y si encuentra devuelve. Devuelve un objeto
 const equiposTalleres = [
-    {modelo: "MS908", precio: 1700*valorDelDolar},
-    {modelo: "MS905 Mini", precio: 1200*valorDelDolar},
-    {modelo: "MS906 BT", precio: 1400*valorDelDolar}
+    {modelo: "MS908", precio: 1700*dolar},
+    {modelo: "MS905 Mini", precio: 1200*dolar},
+    {modelo: "MS906 BT", precio: 1400*dolar}
 ]
 const resultado = equiposTalleres.find ((el) => el.modelo === "MS908");
 console.log(resultado)
@@ -252,8 +254,8 @@ const arrayPrueba2 = [
         cantidad: 2
     }
 ]
-//const validar  = arrayPrueba2.some (el => el.id === 1);
-//console.log(validar)
+// const validar  = arrayPrueba2.some (el => el.id === 1);
+// console.log(validar)
 
 if (arrayPrueba2.some (el => el.id === 1)){
     arrayPrueba2 [0].cantidad += 1;
