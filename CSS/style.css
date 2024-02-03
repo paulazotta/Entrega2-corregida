@@ -1,11 +1,47 @@
+/*LOADER*/
+.loader {
+    width: 48px;
+    height: 48px;
+    border-width: 3px;
+    border-style: dashed solid  solid dotted;
+    border-color: #37BBED #37BBED transparent #37BBED;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 20px;
+    top: 31px;
+    border: 10px solid transparent;
+    border-right-color: #37BBED;
+    transform: rotate(-40deg);
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  
+
 /* ---------------------------------------CARDS--------------------------------------- */
+
 .card{
     
     width: 10rem;
-    background-color: azure;
+    background-color: white;
     border: solid 1px black;
     border-radius: 0,5rem;
     margin: 25px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -30,6 +66,9 @@ h5{
     color: black;
     font-size: 15px;
     font-family: sans-serif;
+}
+.imagenesProductos{
+    width: 13rem;
 }
 /*--------------------VER CARRITO--------------------------*/
 .eliminar-producto{
@@ -92,6 +131,7 @@ h5{
     color: white;
     font-family: sans-serif;
     font-size: 16px;
+    justify-content: center;
 
 }
 .container{
